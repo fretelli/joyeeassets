@@ -1,0 +1,7 @@
+# Cloudflare Pages redirects and rewrites
+
+# Redirect www to non-www
+https://www.joyeeassets.net/* https://joyeeassets.net/:splat 301!
+
+# SPA fallback - serve index.html for all routes that don't match files
+/* /index.html 200
