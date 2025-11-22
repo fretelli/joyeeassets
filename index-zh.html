@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JoyeeAssets - Professional Digital Asset Management and Investment Solutions">
-    <meta name="keywords" content="digital assets, investment, portfolio management, cryptocurrency, blockchain">
+    <meta name="description" content="JoyeeAssets - 专业数字资产管理与投资解决方案">
+    <meta name="keywords" content="数字资产, 投资, 投资组合管理, 加密货币, 区块链">
     <meta name="author" content="JoyeeAssets">
-    <title>JoyeeAssets - Digital Asset Management Solutions</title>
-    
+    <title>JoyeeAssets - 数字资产管理解决方案</title>
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
+        body {
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+        }
+
         .lang-switcher {
             position: fixed;
             top: 20px;
@@ -66,9 +71,10 @@
 <body>
     <!-- Language Switcher -->
     <div class="lang-switcher">
-        <a href="index.html" class="active">EN</a>
-        <a href="index-zh.html">中文</a>
+        <a href="index.html">EN</a>
+        <a href="index-zh.html" class="active">中文</a>
     </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -78,16 +84,16 @@
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#home" class="nav-link">首页</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#services" class="nav-link">服务</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="#about" class="nav-link">关于</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#contact" class="nav-link">联系</a>
                 </li>
             </ul>
             <div class="nav-toggle" id="mobile-menu">
@@ -103,30 +109,30 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Professional <span class="highlight">Digital Asset</span> Management
+                    专业<span class="highlight">数字资产</span>管理
                 </h1>
                 <p class="hero-description">
-                    Maximize your investment potential with our cutting-edge digital asset management platform. 
-                    Secure, intelligent, and designed for the future of finance.
+                    通过我们前沿的数字资产管理平台,最大化您的投资潜力。
+                    安全、智能,专为金融未来而设计。
                 </p>
                 <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary">Get Started</a>
-                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                    <a href="#services" class="btn btn-primary">立即开始</a>
+                    <a href="#about" class="btn btn-secondary">了解更多</a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="hero-graphic">
                     <div class="floating-card card-1">
                         <i class="fas fa-chart-line"></i>
-                        <span>Portfolio Growth</span>
+                        <span>投资组合增长</span>
                     </div>
                     <div class="floating-card card-2">
                         <i class="fas fa-shield-alt"></i>
-                        <span>Secure Trading</span>
+                        <span>安全交易</span>
                     </div>
                     <div class="floating-card card-3">
                         <i class="fas fa-coins"></i>
-                        <span>Multi-Asset Support</span>
+                        <span>多资产支持</span>
                     </div>
                 </div>
             </div>
@@ -141,22 +147,22 @@
                     <div class="feature-icon">
                         <i class="fas fa-lock"></i>
                     </div>
-                    <h3>Bank-Grade Security</h3>
-                    <p>Advanced encryption and multi-layer security protocols to protect your digital assets.</p>
+                    <h3>银行级安全</h3>
+                    <p>先进的加密技术和多层安全协议,保护您的数字资产。</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-chart-bar"></i>
                     </div>
-                    <h3>Real-Time Analytics</h3>
-                    <p>Comprehensive market analysis and portfolio tracking with real-time data updates.</p>
+                    <h3>实时分析</h3>
+                    <p>全面的市场分析和投资组合跟踪,实时数据更新。</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3>Mobile First</h3>
-                    <p>Access your portfolio anywhere with our responsive design and mobile applications.</p>
+                    <h3>移动优先</h3>
+                    <p>通过我们的响应式设计和移动应用,随时随地访问您的投资组合。</p>
                 </div>
             </div>
         </div>
@@ -166,44 +172,44 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <h2>Our Services</h2>
-                <p>Comprehensive digital asset management solutions tailored to your needs</p>
+                <h2>我们的服务</h2>
+                <p>为您量身定制的全面数字资产管理解决方案</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-wallet"></i>
                     </div>
-                    <h3>Portfolio Management</h3>
-                    <p>Professional portfolio optimization and risk management strategies for maximum returns.</p>
+                    <h3>投资组合管理</h3>
+                    <p>专业的投资组合优化和风险管理策略,实现最大回报。</p>
                     <ul class="service-features">
-                        <li>Automated rebalancing</li>
-                        <li>Risk assessment</li>
-                        <li>Performance tracking</li>
+                        <li>自动再平衡</li>
+                        <li>风险评估</li>
+                        <li>绩效跟踪</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-exchange-alt"></i>
                     </div>
-                    <h3>Trading Solutions</h3>
-                    <p>Advanced trading tools and algorithms to execute optimal investment strategies.</p>
+                    <h3>交易解决方案</h3>
+                    <p>先进的交易工具和算法,执行最优投资策略。</p>
                     <ul class="service-features">
-                        <li>Algorithmic trading</li>
-                        <li>Market analysis</li>
-                        <li>Order management</li>
+                        <li>算法交易</li>
+                        <li>市场分析</li>
+                        <li>订单管理</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-user-tie"></i>
                     </div>
-                    <h3>Advisory Services</h3>
-                    <p>Expert consultation and personalized investment advice from industry professionals.</p>
+                    <h3>咨询服务</h3>
+                    <p>来自行业专业人士的专家咨询和个性化投资建议。</p>
                     <ul class="service-features">
-                        <li>Personal consultation</li>
-                        <li>Market insights</li>
-                        <li>Strategy development</li>
+                        <li>个人咨询</li>
+                        <li>市场洞察</li>
+                        <li>策略制定</li>
                     </ul>
                 </div>
             </div>
@@ -215,29 +221,27 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>About JoyeeAssets</h2>
+                    <h2>关于 JoyeeAssets</h2>
                     <p>
-                        JoyeeAssets is a leading digital asset management platform that combines cutting-edge technology 
-                        with financial expertise to deliver superior investment outcomes. Our mission is to democratize 
-                        access to professional-grade asset management tools and strategies.
+                        JoyeeAssets 是领先的数字资产管理平台,结合尖端技术与金融专业知识,
+                        为客户提供卓越的投资成果。我们的使命是让专业级资产管理工具和策略大众化。
                     </p>
                     <p>
-                        Founded by a team of financial technology experts and blockchain pioneers, we leverage advanced 
-                        algorithms, machine learning, and deep market insights to help our clients navigate the complex 
-                        world of digital assets with confidence.
+                        由金融科技专家和区块链先驱团队创立,我们利用先进算法、机器学习和深入的市场洞察,
+                        帮助客户自信地驾驭复杂的数字资产世界。
                     </p>
                     <div class="stats">
                         <div class="stat">
                             <h3>$2.5B+</h3>
-                            <p>Assets Under Management</p>
+                            <p>管理资产规模</p>
                         </div>
                         <div class="stat">
                             <h3>50,000+</h3>
-                            <p>Active Users</p>
+                            <p>活跃用户</p>
                         </div>
                         <div class="stat">
                             <h3>99.9%</h3>
-                            <p>Uptime Guarantee</p>
+                            <p>运行时间保证</p>
                         </div>
                     </div>
                 </div>
@@ -256,8 +260,8 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>Ready to start your digital asset journey? Contact us today.</p>
+                <h2>联系我们</h2>
+                <p>准备开始您的数字资产之旅?立即联系我们。</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
@@ -266,7 +270,7 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div class="contact-details">
-                            <h4>Email</h4>
+                            <h4>邮箱</h4>
                             <p>contact@joyeeassets.net</p>
                         </div>
                     </div>
@@ -275,7 +279,7 @@
                             <i class="fas fa-phone"></i>
                         </div>
                         <div class="contact-details">
-                            <h4>Phone</h4>
+                            <h4>电话</h4>
                             <p>+1 (555) 123-4567</p>
                         </div>
                     </div>
@@ -284,22 +288,22 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="contact-details">
-                            <h4>Office</h4>
-                            <p>New York, NY 10001</p>
+                            <h4>办公室</h4>
+                            <p>纽约, NY 10001</p>
                         </div>
                     </div>
                 </div>
                 <form class="contact-form">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" placeholder="您的姓名" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <input type="email" id="email" name="email" placeholder="您的邮箱" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="您的留言" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary">发送消息</button>
                 </form>
             </div>
         </div>
@@ -314,7 +318,7 @@
                         <span class="logo-icon">💎</span>
                         <span class="logo-text">JoyeeAssets</span>
                     </div>
-                    <p>Professional digital asset management for the modern investor.</p>
+                    <p>为现代投资者提供专业的数字资产管理。</p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
@@ -322,34 +326,34 @@
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h4>Services</h4>
+                    <h4>服务</h4>
                     <ul>
-                        <li><a href="#services">Portfolio Management</a></li>
-                        <li><a href="#services">Trading Solutions</a></li>
-                        <li><a href="#services">Advisory Services</a></li>
+                        <li><a href="#services">投资组合管理</a></li>
+                        <li><a href="#services">交易解决方案</a></li>
+                        <li><a href="#services">咨询服务</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Company</h4>
+                    <h4>公司</h4>
                     <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Resources</h4>
+                    <h4>资源</h4>
                     <ul>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">API Reference</a></li>
-                        <li><a href="#">Support Center</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">文档</a></li>
+                        <li><a href="#">API 参考</a></li>
+                        <li><a href="#">支持中心</a></li>
+                        <li><a href="#">博客</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 JoyeeAssets. All rights reserved.</p>
+                <p>&copy; 2024 JoyeeAssets. 保留所有权利。</p>
             </div>
         </div>
     </footer>

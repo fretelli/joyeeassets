@@ -2,9 +2,18 @@
 
 A professional digital asset management website built for deployment on Cloudflare Pages.
 
+## 🌐 Multi-Language Support
+
+This website is available in:
+- **English** (`index.html`)
+- **中文简体** (`index-zh.html`)
+
+Users can easily switch between languages using the language switcher in the top-right corner.
+
 ## 🚀 Features
 
 - **Modern Design**: Clean, professional interface with smooth animations
+- **Multi-Language**: Support for English and Chinese
 - **Responsive**: Fully responsive design that works on all devices
 - **Fast Loading**: Optimized for performance with Cloudflare's global CDN
 - **SEO Optimized**: Proper meta tags and semantic HTML structure
@@ -15,7 +24,8 @@ A professional digital asset management website built for deployment on Cloudfla
 
 ```
 joyeeassets/
-├── index.html          # Main HTML file
+├── index.html          # Main HTML file (English)
+├── index-zh.html       # Chinese version
 ├── styles.css          # CSS styles and responsive design
 ├── script.js           # JavaScript functionality
 ├── wrangler.toml       # Cloudflare configuration
