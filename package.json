@@ -4,9 +4,6 @@
   "description": "Professional digital asset management website for JoyeeAssets",
   "main": "index.html",
   "scripts": {
-    "dev": "wrangler pages dev .",
-    "deploy": "wrangler pages deploy .",
-    "preview": "wrangler pages deploy . --compatibility-date=2024-10-26",
     "build": "echo 'Static site - no build step required'",
     "start": "python -m http.server 8000"
   },
@@ -20,9 +17,6 @@
   ],
   "author": "JoyeeAssets",
   "license": "MIT",
-  "devDependencies": {
-    "wrangler": "^3.0.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/joyeeassets/website.git"
