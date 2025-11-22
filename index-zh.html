@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JoyeeAssets - 专业数字资产管理与投资解决方案">
-    <meta name="keywords" content="数字资产, 投资, 投资组合管理, 加密货币, 区块链">
-    <meta name="author" content="JoyeeAssets">
-    <title>JoyeeAssets - 数字资产管理解决方案</title>
+    <meta name="description" content="久夷 - 硬核游戏的长期主义者">
+    <meta name="keywords" content="游戏开发, 游戏, 休闲游戏, 手机游戏, 游戏工作室, 量化投资">
+    <meta name="author" content="久夷">
+    <title>久夷 - 硬核游戏的长期主义者</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+    <link rel="icon" type="image/x-icon" href="JoyeeLOGO.jpg">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -66,28 +66,51 @@
                 font-size: 14px;
             }
         }
+
+        /* Particle background styles */
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        .navbar, .hero, .features, .services, .about, .contact, footer {
+            position: relative;
+            z-index: 0;
+        }
+
+        #particle-canvas {
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .lang-switcher {
+            z-index: 10000 !important;
+        }
     </style>
 </head>
 <body>
+    <!-- Particle Background -->
+    <canvas id="particle-canvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1; pointer-events: none;"></canvas>
+
     <!-- Language Switcher -->
     <div class="lang-switcher">
-        <a href="index.html">EN</a>
-        <a href="index-zh.html" class="active">中文</a>
+        <a href="https://joyeeassets.net">EN</a>
+        <a href="https://joyeeassets.com" class="active">中文</a>
     </div>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-icon">💎</span>
-                <span class="logo-text">JoyeeAssets</span>
+                <img src="JoyeeLOGO.jpg" alt="久夷 Logo" style="height: 40px; width: auto;">
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="#home" class="nav-link">首页</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#services" class="nav-link">服务</a>
+                    <a href="#games" class="nav-link">游戏</a>
                 </li>
                 <li class="nav-item">
                     <a href="#about" class="nav-link">关于</a>
@@ -109,30 +132,26 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    专业<span class="highlight">数字资产</span>管理
+                    创作精彩<span class="highlight">游戏</span>
                 </h1>
                 <p class="hero-description">
-                    通过我们前沿的数字资产管理平台,最大化您的投资潜力。
-                    安全、智能,专为金融未来而设计。
+                    我们开发有趣、引人入胜、的游戏,为全球玩家带来欢乐。
+                    富有创意、不断创新,专为纯粹的娱乐而设计。
                 </p>
                 <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary">立即开始</a>
+                    <a href="#games" class="btn btn-primary">查看我们的游戏</a>
                     <a href="#about" class="btn btn-secondary">了解更多</a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="hero-graphic">
                     <div class="floating-card card-1">
-                        <i class="fas fa-chart-line"></i>
-                        <span>投资组合增长</span>
+                        <i class="fas fa-gamepad"></i>
+                        <span>有趣玩法</span>
                     </div>
                     <div class="floating-card card-2">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>安全交易</span>
-                    </div>
-                    <div class="floating-card card-3">
-                        <i class="fas fa-coins"></i>
-                        <span>多资产支持</span>
+                        <i class="fas fa-users"></i>
+                        <span>玩家至上</span>
                     </div>
                 </div>
             </div>
@@ -145,71 +164,71 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-lock"></i>
+                        <i class="fas fa-lightbulb"></i>
                     </div>
-                    <h3>银行级安全</h3>
-                    <p>先进的加密技术和多层安全协议,保护您的数字资产。</p>
+                    <h3>创意设计</h3>
+                    <p>独特而创新的游戏概念,从众多游戏中脱颖而出。</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-chart-bar"></i>
+                        <i class="fas fa-bolt"></i>
                     </div>
-                    <h3>实时分析</h3>
-                    <p>全面的市场分析和投资组合跟踪,实时数据更新。</p>
+                    <h3>流畅性能</h3>
+                    <p>优化的游戏在所有设备上流畅运行,无卡顿。</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
-                    <h3>移动优先</h3>
-                    <p>通过我们的响应式设计和移动应用,随时随地访问您的投资组合。</p>
+                    <h3>玩家至上</h3>
+                    <p>我们设计玩家喜爱并愿意反复游玩的游戏。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- Games Section -->
+    <section id="games" class="services">
         <div class="container">
             <div class="section-header">
-                <h2>我们的服务</h2>
-                <p>为您量身定制的全面数字资产管理解决方案</p>
+                <h2>我们的游戏开发服务</h2>
+                <p>从概念到上线的专业游戏开发</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-wallet"></i>
+                        <i class="fas fa-palette"></i>
                     </div>
-                    <h3>投资组合管理</h3>
-                    <p>专业的投资组合优化和风险管理策略,实现最大回报。</p>
+                    <h3>游戏设计</h3>
+                    <p>针对目标受众量身定制的创意且引人入胜的游戏概念。</p>
                     <ul class="service-features">
-                        <li>自动再平衡</li>
-                        <li>风险评估</li>
-                        <li>绩效跟踪</li>
+                        <li>概念开发</li>
+                        <li>UI/UX设计</li>
+                        <li>角色与美术创作</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-exchange-alt"></i>
+                        <i class="fas fa-code"></i>
                     </div>
-                    <h3>交易解决方案</h3>
-                    <p>先进的交易工具和算法,执行最优投资策略。</p>
+                    <h3>开发制作</h3>
+                    <p>由专家打造的高质量代码和流畅的游戏机制。</p>
                     <ul class="service-features">
-                        <li>算法交易</li>
-                        <li>市场分析</li>
-                        <li>订单管理</li>
+                        <li>跨平台开发</li>
+                        <li>性能优化</li>
+                        <li>测试与调试</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-user-tie"></i>
+                        <i class="fas fa-rocket"></i>
                     </div>
-                    <h3>咨询服务</h3>
-                    <p>来自行业专业人士的专家咨询和个性化投资建议。</p>
+                    <h3>上线与支持</h3>
+                    <p>完整的部署和持续支持,确保您的游戏取得成功。</p>
                     <ul class="service-features">
-                        <li>个人咨询</li>
-                        <li>市场洞察</li>
-                        <li>策略制定</li>
+                        <li>应用商店部署</li>
+                        <li>更新与维护</li>
+                        <li>数据分析与洞察</li>
                     </ul>
                 </div>
             </div>
@@ -221,27 +240,24 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>关于 JoyeeAssets</h2>
+                    <h2>关于久夷</h2>
                     <p>
-                        JoyeeAssets 是领先的数字资产管理平台,结合尖端技术与金融专业知识,
-                        为客户提供卓越的投资成果。我们的使命是让专业级资产管理工具和策略大众化。
+                        久夷是一家富有创意的游戏开发工作室,致力于为全球玩家带来欢乐和娱乐。
+                        我们的使命是创作有趣、引人入胜且令人难忘的游戏体验,点亮人们的每一天。
                     </p>
                     <p>
-                        由金融科技专家和区块链先驱团队创立,我们利用先进算法、机器学习和深入的市场洞察,
-                        帮助客户自信地驾驭复杂的数字资产世界。
+                        我们正在开发<strong>我虫虫(MeBug)</strong>,一款创新的AI虚拟宠物游戏。
+                        我虫虫提供独特的陪伴体验,玩家可以与智能数字宠物互动,
+                        在迷人的虚拟世界中建立联系,创造美好回忆。敬请期待上线!
                     </p>
                     <div class="stats">
                         <div class="stat">
-                            <h3>$2.5B+</h3>
-                            <p>管理资产规模</p>
+                            <h3>我虫虫</h3>
+                            <p>即将上线</p>
                         </div>
                         <div class="stat">
-                            <h3>50,000+</h3>
-                            <p>活跃用户</p>
-                        </div>
-                        <div class="stat">
-                            <h3>99.9%</h3>
-                            <p>运行时间保证</p>
+                            <h3>AI宠物</h3>
+                            <p>虚拟伴侣</p>
                         </div>
                     </div>
                 </div>
@@ -261,7 +277,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>联系我们</h2>
-                <p>准备开始您的数字资产之旅?立即联系我们。</p>
+                <p>对我虫虫感兴趣或想了解更多?立即联系我们。</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
@@ -271,40 +287,25 @@
                         </div>
                         <div class="contact-details">
                             <h4>邮箱</h4>
-                            <p>contact@joyeeassets.net</p>
+                            <p>rogercjd@joyeeassets.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
+                            <i class="fas fa-gamepad"></i>
                         </div>
                         <div class="contact-details">
-                            <h4>电话</h4>
-                            <p>+1 (555) 123-4567</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>办公室</h4>
-                            <p>纽约, NY 10001</p>
+                            <h4>即将推出</h4>
+                            <p>我虫虫 - AI虚拟宠物</p>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="您的姓名" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="您的邮箱" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" placeholder="您的留言" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">发送消息</button>
-                </form>
+                <div class="contact-form" style="text-align: center; padding: 3rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; color: white;">
+                    <i class="fas fa-bug" style="font-size: 4rem; margin-bottom: 1rem; opacity: 0.9;"></i>
+                    <h3 style="margin-bottom: 1rem; font-size: 2rem;">我虫虫即将到来!</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">敬请期待我们的AI虚拟宠物游戏上线。</p>
+                    <p style="font-size: 1rem; opacity: 0.9;">如有咨询,请联系: <strong>rogercjd@joyeeassets.com</strong></p>
+                </div>
             </div>
         </div>
     </section>
@@ -315,22 +316,21 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <span class="logo-icon">💎</span>
-                        <span class="logo-text">JoyeeAssets</span>
+                        <img src="JoyeeLOGO.jpg" alt="久夷 Logo" style="height: 40px; width: auto;">
                     </div>
-                    <p>为现代投资者提供专业的数字资产管理。</p>
+                    <p>创作有趣的游戏,为全球玩家带来欢乐。</p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
                     <h4>服务</h4>
                     <ul>
-                        <li><a href="#services">投资组合管理</a></li>
-                        <li><a href="#services">交易解决方案</a></li>
-                        <li><a href="#services">咨询服务</a></li>
+                        <li><a href="#games">游戏设计</a></li>
+                        <li><a href="#games">开发制作</a></li>
+                        <li><a href="#games">上线与支持</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -338,22 +338,17 @@
                     <ul>
                         <li><a href="#about">关于我们</a></li>
                         <li><a href="#contact">联系我们</a></li>
-                        <li><a href="#">隐私政策</a></li>
                         <li><a href="#">服务条款</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>资源</h4>
-                    <ul>
-                        <li><a href="#">文档</a></li>
-                        <li><a href="#">API 参考</a></li>
-                        <li><a href="#">支持中心</a></li>
-                        <li><a href="#">博客</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 JoyeeAssets. 保留所有权利。</p>
+                <p>&copy; 久夷工作室. 保留所有权利。</p>
+                <p style="margin-top: 10px;">
+                    <a href="http://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+                        沪ICP备2024088434号-4
+                    </a>
+                </p>
             </div>
         </div>
     </footer>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="JoyeeAssets - Professional Digital Asset Management and Investment Solutions">
-    <meta name="keywords" content="digital assets, investment, portfolio management, cryptocurrency, blockchain">
-    <meta name="author" content="JoyeeAssets">
-    <title>JoyeeAssets - Digital Asset Management Solutions</title>
-    
+    <meta name="description" content="Joyee - Long-term Believers in Hardcore Gaming">
+    <meta name="keywords" content="game development, games, casual games, mobile games, game studio, quantitative investment">
+    <meta name="author" content="Joyee">
+    <title>Joyee - Long-term Believers in Hardcore Gaming</title>
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
+    <link rel="icon" type="image/x-icon" href="JoyeeLOGO.jpg">
     
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -61,27 +61,50 @@
                 font-size: 14px;
             }
         }
+
+        /* Particle background styles */
+        body {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        .navbar, .hero, .features, .services, .about, .contact, footer {
+            position: relative;
+            z-index: 0;
+        }
+
+        #particle-canvas {
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .lang-switcher {
+            z-index: 10000 !important;
+        }
     </style>
 </head>
 <body>
+    <!-- Particle Background -->
+    <canvas id="particle-canvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1; pointer-events: none;"></canvas>
+
     <!-- Language Switcher -->
     <div class="lang-switcher">
-        <a href="index.html" class="active">EN</a>
-        <a href="index-zh.html">中文</a>
+        <a href="https://joyeeassets.net" class="active">EN</a>
+        <a href="https://joyeeassets.com">中文</a>
     </div>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-icon">💎</span>
-                <span class="logo-text">JoyeeAssets</span>
+                <img src="JoyeeLOGO.jpg" alt="Joyee Logo" style="height: 40px; width: auto;">
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="#home" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#games" class="nav-link">Games</a>
                 </li>
                 <li class="nav-item">
                     <a href="#about" class="nav-link">About</a>
@@ -103,30 +126,26 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Professional <span class="highlight">Digital Asset</span> Management
+                    Create Amazing <span class="highlight">Games</span>
                 </h1>
                 <p class="hero-description">
-                    Maximize your investment potential with our cutting-edge digital asset management platform. 
-                    Secure, intelligent, and designed for the future of finance.
+                    We develop fun, engaging games that bring joy to players worldwide.
+                    Creative, innovative, and designed for pure entertainment.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#services" class="btn btn-primary">Get Started</a>
+                    <a href="#games" class="btn btn-primary">View Our Games</a>
                     <a href="#about" class="btn btn-secondary">Learn More</a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="hero-graphic">
                     <div class="floating-card card-1">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Portfolio Growth</span>
+                        <i class="fas fa-gamepad"></i>
+                        <span>Fun Gameplay</span>
                     </div>
                     <div class="floating-card card-2">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Secure Trading</span>
-                    </div>
-                    <div class="floating-card card-3">
-                        <i class="fas fa-coins"></i>
-                        <span>Multi-Asset Support</span>
+                        <i class="fas fa-users"></i>
+                        <span>Player First</span>
                     </div>
                 </div>
             </div>
@@ -139,71 +158,71 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-lock"></i>
+                        <i class="fas fa-lightbulb"></i>
                     </div>
-                    <h3>Bank-Grade Security</h3>
-                    <p>Advanced encryption and multi-layer security protocols to protect your digital assets.</p>
+                    <h3>Creative Design</h3>
+                    <p>Unique and innovative game concepts that stand out from the crowd.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-chart-bar"></i>
+                        <i class="fas fa-bolt"></i>
                     </div>
-                    <h3>Real-Time Analytics</h3>
-                    <p>Comprehensive market analysis and portfolio tracking with real-time data updates.</p>
+                    <h3>Fast Performance</h3>
+                    <p>Optimized games that run smoothly on all devices without lag.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
-                    <h3>Mobile First</h3>
-                    <p>Access your portfolio anywhere with our responsive design and mobile applications.</p>
+                    <h3>Player Focused</h3>
+                    <p>We design games that players love to play and keep coming back to.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- Games Section -->
+    <section id="games" class="services">
         <div class="container">
             <div class="section-header">
-                <h2>Our Services</h2>
-                <p>Comprehensive digital asset management solutions tailored to your needs</p>
+                <h2>Our Game Development Service</h2>
+                <p>Professional game development from concept to launch</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-wallet"></i>
+                        <i class="fas fa-palette"></i>
                     </div>
-                    <h3>Portfolio Management</h3>
-                    <p>Professional portfolio optimization and risk management strategies for maximum returns.</p>
+                    <h3>Game Design</h3>
+                    <p>Creative and engaging game concepts tailored to your target audience.</p>
                     <ul class="service-features">
-                        <li>Automated rebalancing</li>
-                        <li>Risk assessment</li>
-                        <li>Performance tracking</li>
+                        <li>Concept development</li>
+                        <li>UI/UX design</li>
+                        <li>Character & art creation</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-exchange-alt"></i>
+                        <i class="fas fa-code"></i>
                     </div>
-                    <h3>Trading Solutions</h3>
-                    <p>Advanced trading tools and algorithms to execute optimal investment strategies.</p>
+                    <h3>Development</h3>
+                    <p>High-quality code and seamless gameplay mechanics built by experts.</p>
                     <ul class="service-features">
-                        <li>Algorithmic trading</li>
-                        <li>Market analysis</li>
-                        <li>Order management</li>
+                        <li>Cross-platform development</li>
+                        <li>Performance optimization</li>
+                        <li>Testing & debugging</li>
                     </ul>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-user-tie"></i>
+                        <i class="fas fa-rocket"></i>
                     </div>
-                    <h3>Advisory Services</h3>
-                    <p>Expert consultation and personalized investment advice from industry professionals.</p>
+                    <h3>Launch & Support</h3>
+                    <p>Complete deployment and ongoing support to ensure your game's success.</p>
                     <ul class="service-features">
-                        <li>Personal consultation</li>
-                        <li>Market insights</li>
-                        <li>Strategy development</li>
+                        <li>App store deployment</li>
+                        <li>Updates & maintenance</li>
+                        <li>Analytics & insights</li>
                     </ul>
                 </div>
             </div>
@@ -215,29 +234,25 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>About JoyeeAssets</h2>
+                    <h2>About Joyee</h2>
                     <p>
-                        JoyeeAssets is a leading digital asset management platform that combines cutting-edge technology 
-                        with financial expertise to deliver superior investment outcomes. Our mission is to democratize 
-                        access to professional-grade asset management tools and strategies.
+                        Joyee is a creative game development studio dedicated to bringing joy and entertainment
+                        to players around the world. Our mission is to create fun, engaging, and memorable gaming
+                        experiences that brighten people's day.
                     </p>
                     <p>
-                        Founded by a team of financial technology experts and blockchain pioneers, we leverage advanced 
-                        algorithms, machine learning, and deep market insights to help our clients navigate the complex 
-                        world of digital assets with confidence.
+                        We are currently developing <strong>MeBug</strong>, an innovative AI-powered virtual pet game.
+                        MeBug offers a unique companion experience where players can interact with their intelligent
+                        digital pet, creating bonds and memories in a charming virtual world. Stay tuned for the launch!
                     </p>
                     <div class="stats">
                         <div class="stat">
-                            <h3>$2.5B+</h3>
-                            <p>Assets Under Management</p>
+                            <h3>MeBug</h3>
+                            <p>Coming Soon</p>
                         </div>
                         <div class="stat">
-                            <h3>50,000+</h3>
-                            <p>Active Users</p>
-                        </div>
-                        <div class="stat">
-                            <h3>99.9%</h3>
-                            <p>Uptime Guarantee</p>
+                            <h3>AI Pet</h3>
+                            <p>Virtual Companion</p>
                         </div>
                     </div>
                 </div>
@@ -257,7 +272,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Get In Touch</h2>
-                <p>Ready to start your digital asset journey? Contact us today.</p>
+                <p>Interested in MeBug or want to learn more? Contact us today.</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
@@ -267,40 +282,25 @@
                         </div>
                         <div class="contact-details">
                             <h4>Email</h4>
-                            <p>contact@joyeeassets.net</p>
+                            <p>rogercjd@joyeeassets.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
+                            <i class="fas fa-gamepad"></i>
                         </div>
                         <div class="contact-details">
-                            <h4>Phone</h4>
-                            <p>+1 (555) 123-4567</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Office</h4>
-                            <p>New York, NY 10001</p>
+                            <h4>Upcoming Game</h4>
+                            <p>MeBug - AI Virtual Pet</p>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+                <div class="contact-form" style="text-align: center; padding: 3rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; color: white;">
+                    <i class="fas fa-bug" style="font-size: 4rem; margin-bottom: 1rem; opacity: 0.9;"></i>
+                    <h3 style="margin-bottom: 1rem; font-size: 2rem;">MeBug is Coming!</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Stay tuned for the launch of our AI-powered virtual pet game.</p>
+                    <p style="font-size: 1rem; opacity: 0.9;">For inquiries, please reach out to: <strong>rogercjd@joyeeassets.com</strong></p>
+                </div>
             </div>
         </div>
     </section>
@@ -311,22 +311,21 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <span class="logo-icon">💎</span>
-                        <span class="logo-text">JoyeeAssets</span>
+                        <img src="JoyeeLOGO.jpg" alt="Joyee Logo" style="height: 40px; width: auto;">
                     </div>
-                    <p>Professional digital asset management for the modern investor.</p>
+                    <p>Creating fun games that bring joy to players worldwide.</p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="#services">Portfolio Management</a></li>
-                        <li><a href="#services">Trading Solutions</a></li>
-                        <li><a href="#services">Advisory Services</a></li>
+                        <li><a href="#games">Game Design</a></li>
+                        <li><a href="#games">Development</a></li>
+                        <li><a href="#games">Launch & Support</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -334,22 +333,21 @@
                     <ul>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">API Reference</a></li>
-                        <li><a href="#">Support Center</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Game Portfolio</a></li>
+                        <li><a href="#">Developer Blog</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Community</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 JoyeeAssets. All rights reserved.</p>
+                <p>&copy; Joyee Studio. All rights reserved.</p>
             </div>
         </div>
     </footer>

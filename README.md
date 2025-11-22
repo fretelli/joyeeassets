@@ -1,6 +1,6 @@
-# JoyeeAssets Website
+# Joyee Game Studio Website
 
-A professional digital asset management website built for deployment on Cloudflare Pages.
+A professional game development studio website built for deployment on Cloudflare Pages.
 
 ## 🌐 Multi-Language Support
 
@@ -13,12 +13,13 @@ Users can easily switch between languages using the language switcher in the top
 ## 🚀 Features
 
 - **Modern Design**: Clean, professional interface with smooth animations
-- **Multi-Language**: Support for English and Chinese
+- **Multi-Language**: Support for English and Chinese (久夷资产)
 - **Responsive**: Fully responsive design that works on all devices
 - **Fast Loading**: Optimized for performance with Cloudflare's global CDN
 - **SEO Optimized**: Proper meta tags and semantic HTML structure
 - **Interactive**: Smooth scrolling, form validation, and engaging animations
 - **Secure**: Security headers and best practices implemented
+- **Game-Focused**: Tailored specifically for showcasing game development services
 
 ## 📁 Project Structure
 
@@ -97,20 +98,20 @@ npm run dev
 ## 📝 Customization
 
 ### Content Updates
-- Edit `index.html` to update text content, contact information, and structure
+- Edit `index.html` and `index-zh.html` to update text content, contact information, and structure
 - Modify `styles.css` to change colors, fonts, and layout
 - Update `script.js` to add new interactive features
 
 ### Branding
-- Replace the diamond emoji (💎) in the logo with your own logo image
+- Logo image: `JoyeeLOGO.jpg` (teal background with "Joyee" and "久夷资产" text)
 - Update color scheme in `styles.css` (search for color variables)
 - Modify the hero section background gradient
 
 ### Contact Information
 Update the contact details in the contact section:
-- Email: `contact@joyeeassets.net`
-- Phone: `+1 (555) 123-4567`
-- Address: `New York, NY 10001`
+- Email: `hello@joyee.games`
+- Game Inquiries: `games@joyee.games`
+- Website: `www.joyee.games`
 
 ## 🔒 Security Features
 
@@ -139,8 +140,17 @@ Update the contact details in the contact section:
 ## 📞 Support
 
 For technical support or customization requests, please contact:
-- Email: contact@joyeeassets.net
-- Website: https://joyeeassets.net
+- Email: hello@joyee.games
+- Game Inquiries: games@joyee.games
+- Website: https://www.joyee.games
+
+## 🎮 About
+
+Joyee (久夷) is a creative game development studio dedicated to bringing joy and entertainment to players around the world. We specialize in:
+- Game design and development
+- Cross-platform game solutions
+- UI/UX design for games
+- Game deployment and maintenance
 
 ## 📄 License
 
@@ -148,4 +158,4 @@ This project is licensed under the MIT License - see the package.json file for d
 
 ---
 
-**Built with ❤️ for JoyeeAssets**
+**Built with ❤️ for Joyee Game Studio**

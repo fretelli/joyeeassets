@@ -69,114 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Contact Form Handling
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
-    
-    // Simple validation
-    if (!name || !email || !message) {
-        showNotification('Please fill in all fields.', 'error');
-        return;
-    }
-    
-    if (!isValidEmail(email)) {
-        showNotification('Please enter a valid email address.', 'error');
-        return;
-    }
-    
-    // Simulate form submission
-    const submitBtn = this.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-    
-    // Simulate API call
-    setTimeout(() => {
-        showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
-        this.reset();
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }, 2000);
-});
-
-// Email validation function
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-// Notification system
-function showNotification(message, type = 'info') {
-    // Remove existing notifications
-    const existingNotification = document.querySelector('.notification');
-    if (existingNotification) {
-        existingNotification.remove();
-    }
-    
-    // Create notification element
-    const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
-    notification.innerHTML = `
-        <div class="notification-content">
-            <span class="notification-message">${message}</span>
-            <button class="notification-close">&times;</button>
-        </div>
-    `;
-    
-    // Add styles
-    notification.style.cssText = `
-        position: fixed;
-        top: 90px;
-        right: 20px;
-        z-index: 10000;
-        max-width: 400px;
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-        font-family: 'Inter', sans-serif;
-    `;
-    
-    // Set colors based on type
-    const colors = {
-        success: { bg: '#10b981', text: 'white' },
-        error: { bg: '#ef4444', text: 'white' },
-        info: { bg: '#2563eb', text: 'white' }
-    };
-    
-    notification.style.backgroundColor = colors[type].bg;
-    notification.style.color = colors[type].text;
-    
-    // Add to DOM
-    document.body.appendChild(notification);
-    
-    // Animate in
-    setTimeout(() => {
-        notification.style.transform = 'translateX(0)';
-    }, 100);
-    
-    // Close button functionality
-    notification.querySelector('.notification-close').addEventListener('click', () => {
-        notification.style.transform = 'translateX(100%)';
-        setTimeout(() => notification.remove(), 300);
-    });
-    
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-        if (notification.parentNode) {
-            notification.style.transform = 'translateX(100%)';
-            setTimeout(() => notification.remove(), 300);
-        }
-    }, 5000);
-}
+// Contact Form Handling (disabled - no form currently)
+// Form has been replaced with MeBug announcement section
 
 // Parallax effect for hero section
 window.addEventListener('scroll', function() {
@@ -342,3 +236,272 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+
+// ==========================================
+// Hardcore Gaming Effect - Matrix + Particles + Scan Lines
+// ==========================================
+
+// Matrix Rain Drop
+class MatrixDrop {
+    constructor(canvas) {
+        this.canvas = canvas;
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height - canvas.height;
+        this.speed = Math.random() * 3 + 2;
+        this.chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+        this.char = this.chars.charAt(Math.floor(Math.random() * this.chars.length));
+        this.opacity = Math.random() * 0.5 + 0.3;
+        this.fontSize = 16;
+    }
+
+    update() {
+        this.y += this.speed;
+        if (this.y > this.canvas.height) {
+            this.y = -this.fontSize;
+            this.x = Math.random() * this.canvas.width;
+            this.char = this.chars.charAt(Math.floor(Math.random() * this.chars.length));
+        }
+    }
+
+    draw(ctx) {
+        ctx.fillStyle = `rgba(0, 255, 65, ${this.opacity * 0.3})`; // Reduced opacity
+        ctx.font = `${this.fontSize}px monospace`;
+        ctx.fillText(this.char, this.x, this.y);
+    }
+}
+
+// Particle for cyberpunk effect
+class Particle {
+    constructor(canvas) {
+        this.canvas = canvas;
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 3 + 1;
+        this.speedX = Math.random() * 1 - 0.5;
+        this.speedY = Math.random() * 1 - 0.5;
+        this.opacity = Math.random() * 0.6 + 0.2;
+        this.hue = Math.random() * 60 + 160; // Blue to purple range
+    }
+
+    update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        // Wrap around screen
+        if (this.x > this.canvas.width) this.x = 0;
+        if (this.x < 0) this.x = this.canvas.width;
+        if (this.y > this.canvas.height) this.y = 0;
+        if (this.y < 0) this.y = this.canvas.height;
+    }
+
+    draw(ctx) {
+        // Cyberpunk glow (reduced opacity)
+        const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 5);
+        gradient.addColorStop(0, `hsla(${this.hue}, 100%, 60%, ${this.opacity * 0.4})`);
+        gradient.addColorStop(0.5, `hsla(${this.hue}, 100%, 50%, ${this.opacity * 0.15})`);
+        gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size * 5, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Core (reduced opacity)
+        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity * 0.4})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size * 0.5, 0, Math.PI * 2);
+        ctx.fill();
+    }
+}
+
+// Hexagon Grid
+class HexGrid {
+    constructor(canvas) {
+        this.canvas = canvas;
+        this.size = 50;
+        this.hexagons = [];
+        this.generateGrid();
+    }
+
+    generateGrid() {
+        const rows = Math.ceil(this.canvas.height / (this.size * 1.5)) + 1;
+        const cols = Math.ceil(this.canvas.width / (this.size * Math.sqrt(3))) + 1;
+
+        for (let row = 0; row < rows; row++) {
+            for (let col = 0; col < cols; col++) {
+                const x = col * this.size * Math.sqrt(3) + (row % 2) * this.size * Math.sqrt(3) / 2;
+                const y = row * this.size * 1.5;
+                if (Math.random() > 0.7) { // Only show some hexagons
+                    this.hexagons.push({
+                        x, y,
+                        opacity: Math.random() * 0.3,
+                        pulse: Math.random() * Math.PI * 2
+                    });
+                }
+            }
+        }
+    }
+
+    draw(ctx) {
+        this.hexagons.forEach(hex => {
+            hex.pulse += 0.02;
+            const pulseOpacity = hex.opacity * (0.5 + Math.sin(hex.pulse) * 0.5);
+
+            ctx.strokeStyle = `rgba(0, 255, 255, ${pulseOpacity * 0.15})`; // More subtle
+            ctx.lineWidth = 0.5;
+            ctx.beginPath();
+
+            for (let i = 0; i < 6; i++) {
+                const angle = (Math.PI / 3) * i;
+                const x = hex.x + this.size * Math.cos(angle);
+                const y = hex.y + this.size * Math.sin(angle);
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            }
+            ctx.closePath();
+            ctx.stroke();
+        });
+    }
+}
+
+function initParticles() {
+    const canvas = document.getElementById('particle-canvas');
+    if (!canvas) {
+        console.error('Particle canvas not found!');
+        return;
+    }
+
+    console.log('Hardcore gaming effects initializing...');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let matrixDrops = [];
+    let hexGrid;
+    let scanLineY = 0;
+    let glitchOffset = 0;
+    let animationId;
+
+    // Set canvas size
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        hexGrid = new HexGrid(canvas);
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Create particles
+    const particleCount = Math.floor((canvas.width * canvas.height) / 10000);
+    for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle(canvas));
+    }
+
+    // Create matrix drops
+    const dropCount = Math.floor(canvas.width / 20);
+    for (let i = 0; i < dropCount; i++) {
+        matrixDrops.push(new MatrixDrop(canvas));
+    }
+
+    // Animation loop
+    function animate() {
+        // Clear canvas completely (no trail effect to avoid blocking content)
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw hexagon grid (subtle background)
+        hexGrid.draw(ctx);
+
+        // Draw matrix rain
+        matrixDrops.forEach(drop => {
+            drop.update();
+            drop.draw(ctx);
+        });
+
+        // Update and draw particles
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw(ctx);
+        });
+
+        // Draw connections between particles
+        particles.forEach((particleA, indexA) => {
+            particles.slice(indexA + 1).forEach(particleB => {
+                const dx = particleA.x - particleB.x;
+                const dy = particleA.y - particleB.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < 120) {
+                    const opacity = 0.15 * (1 - distance / 120); // Reduced opacity
+                    const gradient = ctx.createLinearGradient(particleA.x, particleA.y, particleB.x, particleB.y);
+                    gradient.addColorStop(0, `rgba(0, 255, 255, ${opacity})`);
+                    gradient.addColorStop(1, `rgba(255, 0, 255, ${opacity})`);
+                    ctx.strokeStyle = gradient;
+                    ctx.lineWidth = 0.5;
+                    ctx.beginPath();
+                    ctx.moveTo(particleA.x, particleA.y);
+                    ctx.lineTo(particleB.x, particleB.y);
+                    ctx.stroke();
+                }
+            });
+        });
+
+        // Scan line effect
+        scanLineY += 2;
+        if (scanLineY > canvas.height) scanLineY = 0;
+
+        const scanGradient = ctx.createLinearGradient(0, scanLineY - 50, 0, scanLineY + 50);
+        scanGradient.addColorStop(0, 'rgba(0, 255, 255, 0)');
+        scanGradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.03)'); // Very subtle
+        scanGradient.addColorStop(1, 'rgba(0, 255, 255, 0)');
+        ctx.fillStyle = scanGradient;
+        ctx.fillRect(0, scanLineY - 50, canvas.width, 100);
+
+        // Random glitch effect
+        if (Math.random() > 0.98) {
+            glitchOffset = (Math.random() - 0.5) * 20;
+            ctx.save();
+            ctx.translate(glitchOffset, 0);
+
+            // RGB split effect
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            ctx.restore();
+        }
+
+        animationId = requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // Mouse interaction
+    let mouse = { x: null, y: null, radius: 150 };
+
+    canvas.addEventListener('mousemove', (e) => {
+        mouse.x = e.x;
+        mouse.y = e.y;
+
+        particles.forEach(particle => {
+            const dx = mouse.x - particle.x;
+            const dy = mouse.y - particle.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < mouse.radius) {
+                const angle = Math.atan2(dy, dx);
+                const force = (mouse.radius - distance) / mouse.radius;
+                particle.x -= Math.cos(angle) * force * 2;
+                particle.y -= Math.sin(angle) * force * 2;
+            }
+        });
+    });
+
+    canvas.addEventListener('mouseleave', () => {
+        mouse.x = null;
+        mouse.y = null;
+    });
+}
+
+// Particle canvas is now transparent and floats above content
+
+// Initialize particles when DOM is loaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initParticles);
+} else {
+    initParticles();
+}
